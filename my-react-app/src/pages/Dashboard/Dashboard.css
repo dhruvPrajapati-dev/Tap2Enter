@@ -1,0 +1,6 @@
+.dashboard{
+    padding:0px;
+    background:#f5f7fb;
+    color: #2e303a;
+    min-height:calc(100vh - 80px);
+}

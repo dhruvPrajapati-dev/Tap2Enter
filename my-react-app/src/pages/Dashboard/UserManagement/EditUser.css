@@ -1,0 +1,796 @@
+/* ===========================
+   EDIT USER PAGE
+=========================== */
+
+.editUserPage{
+    width:100%;
+    padding:30px;
+    background:#f4f7fb;
+    min-height:100vh;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.editHeader{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.leftHeader{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.backBtn{
+    width:46px;
+    height:46px;
+    border:none;
+    border-radius:12px;
+    background:#2563eb;
+    color:#fff;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.backBtn:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+.leftHeader h2{
+    font-size:28px;
+    color:#1e293b;
+    margin-bottom:4px;
+    font-weight:700;
+}
+
+.leftHeader p{
+    color:#64748b;
+    font-size:15px;
+}
+
+.breadcrumb{
+    font-size:14px;
+    color:#64748b;
+    background:#fff;
+    padding:10px 18px;
+    border-radius:8px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+}
+
+/* ===========================
+   MAIN CARD
+=========================== */
+
+.editCard{
+    background:#fff;
+    border-radius:18px;
+    padding:35px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+/* ===========================
+   FORM GRID
+=========================== */
+
+.formGrid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+/* ===========================
+   FORM GROUP
+=========================== */
+
+.formGroup{
+    display:flex;
+    flex-direction:column;
+}
+
+.formGroup label{
+    font-size:14px;
+    font-weight:600;
+    color:#374151;
+    margin-bottom:8px;
+}
+
+/* ===========================
+   INPUT BOX
+=========================== */
+
+.inputBox{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    border:1px solid #dbe3ec;
+    border-radius:10px;
+    background:#fff;
+    padding:0 15px;
+    transition:.3s;
+    height:50px;
+}
+
+.inputBox:hover{
+    border-color:#2563eb;
+}
+
+.inputBox:focus-within{
+    border-color:#2563eb;
+    box-shadow:0 0 0 3px rgba(37,99,235,.12);
+}
+
+.inputBox svg{
+    color:#2563eb;
+    font-size:18px;
+}
+
+.inputBox input{
+    width:100%;
+    height:100%;
+    border:none;
+    outline:none;
+    font-size:15px;
+    background:transparent;
+    color:#334155;
+}
+
+.inputBox input::placeholder{
+    color:#94a3b8;
+}
+
+/* ===========================
+   NFC ROW
+=========================== */
+
+.nfcRow{
+    display:flex;
+    gap:12px;
+}
+
+.nfcRow .inputBox{
+    flex:1;
+}
+
+/* ===========================
+   NFC BUTTON
+=========================== */
+
+.scanBtn{
+    border:none;
+    background:#2563eb;
+    color:#fff;
+    padding:0 20px;
+    border-radius:10px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+    white-space:nowrap;
+}
+
+.scanBtn:hover{
+    background:#1d4ed8;
+}
+
+.scanBtn svg{
+    font-size:15px;
+}
+
+/* ===========================
+   SECTION TITLE
+=========================== */
+
+.sectionTitle{
+    font-size:18px;
+    font-weight:600;
+    color:#1e293b;
+    margin:35px 0 20px;
+}
+
+/* ===========================
+   DIVIDER
+=========================== */
+
+.divider{
+    width:100%;
+    height:1px;
+    background:#edf2f7;
+    margin:30px 0;
+}
+
+/* ===================================
+   PHOTO & FACE SECTION
+=================================== */
+
+.twoCards{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    margin-top:35px;
+}
+
+.photoCard,
+.faceCard{
+    background:#ffffff;
+    border:1px solid #e5e7eb;
+    border-radius:16px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+
+.photoCard h3,
+.faceCard h3{
+    font-size:20px;
+    color:#1e293b;
+    margin-bottom:20px;
+}
+
+/* ===================================
+   USER PHOTO
+=================================== */
+
+.userPhoto{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #2563eb;
+    margin:0 auto 20px;
+    display:block;
+    background:#f1f5f9;
+}
+
+/* ===================================
+   BUTTON GROUP
+=================================== */
+
+.photoBtns{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin:20px 0;
+}
+
+/* Blue Button */
+
+.blueBtn{
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    padding:12px 18px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.blueBtn:hover{
+    background:#1d4ed8;
+}
+
+/* Red Button */
+
+.redBtn{
+    background:#ef4444;
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    padding:12px 18px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.redBtn:hover{
+    background:#dc2626;
+}
+
+.photoCard p,
+.faceCard p{
+    color:#64748b;
+    font-size:13px;
+    margin-top:10px;
+}
+
+/* ===================================
+   FACE STATUS
+=================================== */
+
+.faceStatus{
+    background:#ecfdf5;
+    border:1px solid #bbf7d0;
+    border-radius:14px;
+    padding:20px;
+    margin-bottom:20px;
+}
+
+.faceStatus svg{
+    color:#16a34a;
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.faceStatus span{
+    display:block;
+    font-size:18px;
+    font-weight:700;
+    color:#15803d;
+}
+
+.faceStatus p{
+    color:#64748b;
+    font-size:13px;
+    margin-top:8px;
+}
+
+/* ===================================
+   STATUS & REGISTERED DATE
+=================================== */
+
+.bottomRow{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    margin-top:35px;
+}
+
+.statusSection,
+.registerDate{
+    background:#fff;
+}
+
+.statusSection label,
+.registerDate label{
+    display:block;
+    font-weight:600;
+    color:#374151;
+    margin-bottom:12px;
+}
+
+/* Radio Buttons */
+
+.radioGroup{
+    display:flex;
+    gap:30px;
+    align-items:center;
+}
+
+.radioGroup label{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.radioGroup input{
+    width:18px;
+    height:18px;
+    accent-color:#2563eb;
+}
+
+/* ===================================
+   FOOTER BUTTONS
+=================================== */
+
+.footerBtns{
+    margin-top:35px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.footerBtns div{
+    display:flex;
+    gap:15px;
+}
+
+.cancelBtn{
+    background:#e5e7eb;
+    color:#374151;
+    border:none;
+    padding:13px 30px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+.cancelBtn:hover{
+    background:#d1d5db;
+}
+
+.deleteBtn{
+    background:#ef4444;
+    color:#fff;
+    border:none;
+    padding:13px 28px;
+    border-radius:10px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.deleteBtn:hover{
+    background:#dc2626;
+}
+
+.updateBtn{
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    padding:13px 28px;
+    border-radius:10px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.updateBtn:hover{
+    background:#1d4ed8;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+=================================== */
+
+@media (max-width:1200px){
+
+.editCard{
+    padding:25px;
+}
+
+.twoCards{
+    gap:20px;
+}
+
+}
+
+/* Tablet */
+
+@media (max-width:992px){
+
+.formGrid{
+    grid-template-columns:1fr;
+}
+
+.bottomRow{
+    grid-template-columns:1fr;
+}
+
+.twoCards{
+    grid-template-columns:1fr;
+}
+
+.footerBtns{
+    flex-direction:column;
+    align-items:stretch;
+}
+
+.footerBtns div{
+    width:100%;
+    justify-content:space-between;
+}
+
+.cancelBtn,
+.deleteBtn,
+.updateBtn{
+    flex:1;
+    justify-content:center;
+}
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+.editUserPage{
+    padding:15px;
+}
+
+.editHeader{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.leftHeader{
+    width:100%;
+}
+
+.leftHeader h2{
+    font-size:24px;
+}
+
+.breadcrumb{
+    width:100%;
+    text-align:center;
+}
+
+.editCard{
+    padding:18px;
+}
+
+.formGrid{
+    gap:18px;
+}
+
+.nfcRow{
+    flex-direction:column;
+}
+
+.scanBtn{
+    width:100%;
+    justify-content:center;
+    height:48px;
+}
+
+.photoBtns{
+    flex-direction:column;
+}
+
+.blueBtn,
+.redBtn{
+    width:100%;
+    justify-content:center;
+}
+
+.footerBtns div{
+    flex-direction:column;
+}
+
+.cancelBtn,
+.deleteBtn,
+.updateBtn{
+    width:100%;
+}
+
+.userPhoto{
+    width:120px;
+    height:120px;
+}
+
+}
+
+/* Small Mobile */
+
+@media (max-width:480px){
+
+.leftHeader{
+    gap:12px;
+}
+
+.backBtn{
+    width:42px;
+    height:42px;
+}
+
+.leftHeader h2{
+    font-size:20px;
+}
+
+.leftHeader p{
+    font-size:13px;
+}
+
+.formGroup label{
+    font-size:13px;
+}
+
+.inputBox{
+    height:46px;
+    padding:0 12px;
+}
+
+.inputBox input{
+    font-size:14px;
+}
+
+.photoCard,
+.faceCard{
+    padding:18px;
+}
+
+.photoCard h3,
+.faceCard h3{
+    font-size:18px;
+}
+
+.faceStatus{
+    padding:15px;
+}
+
+.faceStatus svg{
+    font-size:34px;
+}
+
+.faceStatus span{
+    font-size:16px;
+}
+
+.radioGroup{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
+}
+
+}
+
+/* ===================================
+   INPUT PLACEHOLDER
+=================================== */
+
+input::placeholder{
+    color:#94a3b8;
+}
+
+textarea::placeholder{
+    color:#94a3b8;
+}
+
+/* ===================================
+   INPUT DISABLED
+=================================== */
+
+input:disabled{
+    background:#f8fafc;
+    color:#64748b;
+    cursor:not-allowed;
+}
+
+/* ===================================
+   INPUT FOCUS
+=================================== */
+
+input:focus,
+select:focus{
+    outline:none;
+}
+
+/* ===================================
+   BUTTON ANIMATION
+=================================== */
+
+button{
+    transition:all .25s ease;
+}
+
+button:active{
+    transform:scale(.97);
+}
+
+/* ===================================
+   CARD HOVER
+=================================== */
+
+.photoCard:hover,
+.faceCard:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+/* ===================================
+   SCROLLBAR
+=================================== */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#eef2f7;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2563eb;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#1d4ed8;
+}
+
+/* ===================================
+   FADE ANIMATION
+=================================== */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.editUserPage{
+    animation:fadeIn .35s ease;
+}
+
+/* ===================================
+   SHADOW UTILITIES
+=================================== */
+
+.shadow-sm{
+    box-shadow:0 2px 6px rgba(0,0,0,.05);
+}
+
+.shadow-md{
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+}
+
+.shadow-lg{
+    box-shadow:0 12px 35px rgba(0,0,0,.12);
+}
+
+/* ===================================
+   BORDER UTILITIES
+=================================== */
+
+.borderBlue{
+    border:1px solid #2563eb;
+}
+
+.borderGreen{
+    border:1px solid #22c55e;
+}
+
+.borderRed{
+    border:1px solid #ef4444;
+}
+
+/* ===================================
+   TEXT UTILITIES
+=================================== */
+
+.textPrimary{
+    color:#2563eb;
+}
+
+.textSuccess{
+    color:#16a34a;
+}
+
+.textDanger{
+    color:#dc2626;
+}
+
+.textMuted{
+    color:#64748b;
+}

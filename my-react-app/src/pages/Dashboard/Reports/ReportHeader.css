@@ -1,0 +1,131 @@
+/* ==========================================
+   REPORT HEADER
+========================================== */
+
+.reportsHeader{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#ffffff;
+    padding:25px 30px;
+    border-radius:18px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    margin-bottom:25px;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+/* ==========================================
+   LEFT SIDE
+========================================== */
+
+.headerLeft{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.reportIcon{
+    width:70px;
+    height:70px;
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    border-radius:18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size:30px;
+    box-shadow:0 8px 20px rgba(37,99,235,.3);
+}
+
+.headerLeft h2{
+    margin:0;
+    font-size:30px;
+    font-weight:700;
+    color:#1e293b;
+}
+
+.headerLeft p{
+    margin-top:6px;
+    font-size:15px;
+    color:#64748b;
+}
+
+/* ==========================================
+   BREADCRUMB
+========================================== */
+
+.breadcrumb{
+    background:#f8fafc;
+    padding:12px 20px;
+    border-radius:10px;
+    color:#64748b;
+    font-size:14px;
+    font-weight:500;
+    border:1px solid #e2e8f0;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+.reportsHeader{
+    flex-direction:column;
+    align-items:flex-start;
+    padding:20px;
+}
+
+.headerLeft{
+    width:100%;
+}
+
+.reportIcon{
+    width:60px;
+    height:60px;
+    font-size:24px;
+}
+
+.headerLeft h2{
+    font-size:24px;
+}
+
+.headerLeft p{
+    font-size:14px;
+}
+
+.breadcrumb{
+    width:100%;
+    text-align:center;
+}
+
+}
+
+@media(max-width:480px){
+
+.headerLeft{
+    gap:15px;
+}
+
+.reportIcon{
+    width:55px;
+    height:55px;
+    border-radius:14px;
+    font-size:22px;
+}
+
+.headerLeft h2{
+    font-size:22px;
+}
+
+.headerLeft p{
+    font-size:13px;
+}
+
+.breadcrumb{
+    font-size:13px;
+    padding:10px 15px;
+}
+
+}

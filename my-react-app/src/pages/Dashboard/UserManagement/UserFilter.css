@@ -1,0 +1,161 @@
+.filterCard{
+
+    background:#FFFFFF;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:18px;
+
+    padding: 20px;
+
+    margin-top:25px;
+
+    display:grid;
+
+    grid-template-columns:3fr 1.5fr 1.2fr auto auto auto;
+
+    gap:12px;
+
+    align-items:center;
+
+    box-shadow:0 6px 20px rgba(15,23,42,.05);
+
+}
+
+/* Search */
+
+.searchBox{
+
+    height:52px;
+
+    border:1px solid #D1D5DB;
+
+    border-radius:12px;
+
+    padding:0 18px;
+
+    font-size:15px;
+
+    background:#FFFFFF;
+color:#1F2937;
+    transition:.3s;
+
+}
+
+.searchBox:focus{
+
+    outline:none;
+
+    border-color:#2563EB;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+/* Select */
+
+.selectBox{
+
+    height:52px;
+
+    border:1px solid #D1D5DB;
+
+    border-radius:12px;
+
+    padding:0 16px;
+
+    background:#2563EB;
+    color:#FFFFFF;
+    font-size:15px;
+
+    cursor:pointer;
+
+}
+
+.selectBox:focus{
+
+    outline:none;
+
+    border-color:#2563EB;
+
+}
+
+/* Buttons */
+
+.searchBtn,
+.filterBtn,
+.resetBtn{
+
+    height:52px;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:0 22px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+/* Blue */
+
+.searchBtn{
+
+    background:#2563EB;
+
+    color:#fff;
+
+}
+
+.searchBtn:hover{
+
+    background:#1D4ED8;
+
+}
+
+/* Cyan */
+
+.filterBtn{
+
+    background:#06B6D4;
+
+    color:#fff;
+
+}
+
+.filterBtn:hover{
+
+    background:#0891B2;
+
+}
+
+/* Gray */
+
+.resetBtn{
+
+    background:#F3F4F6;
+
+    color:#374151;
+
+}
+
+.resetBtn:hover{
+
+    background:#E5E7EB;
+
+}

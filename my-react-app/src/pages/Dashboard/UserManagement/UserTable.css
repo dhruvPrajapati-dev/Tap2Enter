@@ -1,0 +1,283 @@
+.tableCard{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    margin-top:25px;
+    text-align: center;
+    border:1px solid #E5E7EB;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+
+}
+
+.tableHeader{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:25px;
+
+    border-bottom:1px solid #ECECEC;
+
+}
+
+.tableHeader h2{
+
+    font-size:24px;
+
+    color:#1F2937;
+
+}
+
+.tableHeader p{
+
+    color:#6B7280;
+
+    margin-top:5px;
+
+}
+
+table{
+    text-align: center;
+    align-content: center;
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+thead{
+
+    background:#F8FAFC;
+
+}
+
+th{
+    text-align: center;
+    padding:18px;
+
+    text-align:left;
+
+    color:#374151;
+
+    font-size:15px;
+
+}
+
+td{
+
+    padding:18px;
+
+    border-top:1px solid #F1F5F9;
+
+    font-size:15px;
+
+}
+
+tbody tr:hover{
+
+    background:#F8FAFC;
+
+}
+
+.userInfo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.userInfo img{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+}
+
+.nfcBadge{
+
+    background:#DBEAFE;
+
+    color:#2563EB;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+}
+
+.faceYes{
+
+    background:#DCFCE7;
+
+    color:#15803D;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+}
+
+.faceNo{
+
+    background:#FEE2E2;
+
+    color:#DC2626;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+}
+
+.active{
+
+    background:#DCFCE7;
+
+    color:#15803D;
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+}
+
+.inactive{
+
+    background:#FEE2E2;
+
+    color:#DC2626;
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+}
+
+.actionBtns{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.actionBtns button{
+
+    width:38px;
+
+    height:38px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    color:#fff;
+
+}
+
+.viewBtn{
+
+    background:#2563EB;
+
+}
+
+.edit{
+
+    background:#F59E0B;
+
+}
+
+.delete{
+
+    background:#EF4444;
+
+}
+
+.pagination{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px;
+
+    border-top:1px solid #E5E7EB;
+
+}
+
+.pagination button{
+
+    width:36px;
+
+    height:36px;
+
+    border:none;
+
+    border-radius:8px;
+
+    margin-left:8px;
+
+    cursor:pointer;
+
+}
+
+.pageActive{
+
+    background:#2563EB;
+
+    color:#fff;
+
+}
+.tableCard{
+
+    width:100%;
+
+    background:#fff;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    border:1px solid #E5E7EB;
+}
+
+.tableResponsive{
+
+    width:100%;
+
+    overflow-x:auto;
+}
+table{
+    width:100%;
+    table-layout:fixed;
+    text-align: center;
+    
+}

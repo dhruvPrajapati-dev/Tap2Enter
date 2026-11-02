@@ -1,0 +1,661 @@
+/* =========================================================
+   USER WISE REPORT PAGE
+========================================================= */
+
+.userWisePage {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 30px;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.pageHeader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.headerLeft {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.backButton {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #dbe2ea;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #475569;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.backButton:hover {
+    background: #f1f5f9;
+    color: #2563eb;
+}
+
+.headerIcon {
+    width: 48px;
+    height: 48px;
+    border-radius: 11px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 20px;
+}
+
+.headerText h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.headerText p {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.breadcrumb {
+    font-size: 13px;
+    color: #64748b;
+}
+
+
+/* =========================================================
+   SEARCH CARD
+========================================================= */
+
+.searchCard {
+    width: 100%;
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+
+    padding: 24px;
+    box-sizing: border-box;
+
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+
+    animation: fadeUp 0.3s ease;
+}
+
+
+/* =========================================================
+   SEARCH CARD HEADER
+========================================================= */
+
+.searchCardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+}
+
+.searchCardHeader h3 {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.searchCardHeader p {
+    margin: 5px 0 0;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.reportIcon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.formGrid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+
+    max-width: 850px;
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.formGroup {
+    width: 100%;
+}
+
+.formGroup.fullWidth {
+    grid-column: 1 / 3;
+
+    /* IMPORTANT:
+       Do not allow the name/search field
+       to become unnecessarily wide.
+    */
+
+    max-width: 850px;
+}
+
+.formGroup label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #334155;
+}
+
+.required {
+    color: #ef4444;
+    margin-left: 3px;
+}
+
+
+/* =========================================================
+   SEARCH INPUT
+========================================================= */
+
+.searchBox {
+    width: 850px;
+    max-width: 850px;
+
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 13px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #dbe2ea;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    transition: 0.2s;
+}
+
+.searchBox svg {
+    color: #64748b;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.searchBox input {
+    width: fill;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-size: 14px;
+    color: #1e293b;
+}
+
+.searchBox input::placeholder {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   DATE INPUT
+========================================================= */
+
+.inputBox {
+    width: 100%;
+    max-width: 410px;
+
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 13px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #dbe2ea;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+}
+
+.inputBox svg {
+    color: #64748b;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.inputBox input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-size: 14px;
+    color: #334155;
+}
+
+
+/* =========================================================
+   INPUT FOCUS
+========================================================= */
+
+.searchBox:focus-within,
+.inputBox:focus-within {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+
+/* =========================================================
+   BUTTON AREA
+========================================================= */
+
+.buttonArea {
+    display: flex;
+
+    justify-content: flex-start;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 24px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #f1f5f9;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.generateBtn,
+.resetBtn {
+    height: 44px;
+
+    min-width: 150px;
+
+    padding: 0 20px;
+
+    border-radius: 9px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+
+/* Generate */
+
+.generateBtn {
+    background: #2563eb;
+
+    color: #ffffff;
+
+    border: 1px solid #2563eb;
+}
+
+.generateBtn:hover {
+    background: #1d4ed8;
+
+    border-color: #1d4ed8;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 5px 12px rgba(37, 99, 235, 0.20);
+}
+
+
+/* Reset */
+
+.resetBtn {
+    min-width: 110px;
+
+    background: #ffffff;
+
+    color: #475569;
+
+    border: 1px solid #dbe2ea;
+}
+
+.resetBtn:hover {
+    background: #f8fafc;
+
+    border-color: #cbd5e1;
+
+    color: #1e293b;
+}
+
+
+/* Disabled */
+
+.generateBtn:disabled,
+.resetBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.reportError {
+    width: 100%;
+    max-width: 850px;
+
+    min-height: 44px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 10px 13px;
+
+    margin-bottom: 18px;
+
+    box-sizing: border-box;
+
+    background: #fef2f2;
+
+    border: 1px solid #fecaca;
+
+    border-radius: 9px;
+
+    color: #b91c1c;
+
+    font-size: 13px;
+}
+
+.reportError span {
+    flex: 1;
+}
+
+.reportError button {
+    border: none;
+    background: transparent;
+
+    color: #b91c1c;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.reportLoading {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    padding: 18px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+.spinIcon {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   REPORT RESULT
+========================================================= */
+
+.reportResult {
+    width: 100%;
+
+    margin-top: 24px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   NO REPORT
+========================================================= */
+
+.noReport {
+    margin-top: 24px;
+
+    padding: 45px 20px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 14px;
+
+    color: #64748b;
+}
+
+.noReport svg {
+    font-size: 35px;
+
+    color: #94a3b8;
+
+    margin-bottom: 10px;
+}
+
+.noReport h3 {
+    margin: 0 0 5px;
+
+    color: #334155;
+
+    font-size: 18px;
+}
+
+.noReport p {
+    margin: 0;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .userWisePage {
+        padding: 20px;
+    }
+
+    .formGrid {
+        max-width: 100%;
+    }
+
+    .formGroup.fullWidth {
+        max-width: 100%;
+    }
+
+    .searchBox {
+        max-width: 850px;
+    }
+
+    .inputBox {
+        max-width: 100%;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .pageHeader {
+        align-items: flex-start;
+    }
+
+    .breadcrumb {
+        display: none;
+    }
+
+    .formGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .formGroup.fullWidth {
+        grid-column: 1;
+    }
+
+    .buttonArea {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .userWisePage {
+        padding: 12px;
+    }
+
+    .searchCard {
+        padding: 18px;
+    }
+
+    .headerIcon {
+        width: 42px;
+        height: 42px;
+        font-size: 17px;
+    }
+
+    .headerText h2 {
+        font-size: 20px;
+    }
+
+    .headerText p {
+        display: none;
+    }
+
+    .searchCardHeader h3 {
+        font-size: 17px;
+    }
+
+    .buttonArea {
+        flex-direction: row;
+    }
+
+    .generateBtn {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .resetBtn {
+        min-width: 95px;
+    }
+
+}

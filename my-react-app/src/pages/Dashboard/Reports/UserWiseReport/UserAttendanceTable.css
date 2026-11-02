@@ -1,0 +1,297 @@
+/* ==========================================
+   ATTENDANCE TABLE CARD
+========================================== */
+
+.attendanceTableCard{
+    margin-top:25px;
+    background:#ffffff;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(15,23,42,.08);
+    overflow:hidden;
+}
+
+/* ==========================================
+   TABLE HEADER
+========================================== */
+
+.tableHeader{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px;
+    border-bottom:1px solid #e2e8f0;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.tableHeader h3{
+    font-size:24px;
+    font-weight:700;
+    color:#1e293b;
+    margin-bottom:5px;
+}
+
+.tableHeader p{
+    color:#64748b;
+    font-size:14px;
+}
+
+/* ==========================================
+   EXPORT BUTTONS
+========================================== */
+
+.exportButtons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.exportButtons button{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:11px 18px;
+    border:none;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.excelBtn{
+    background:#16a34a;
+    color:#fff;
+}
+
+.excelBtn:hover{
+    background:#15803d;
+}
+
+.pdfBtn{
+    background:#dc2626;
+    color:#fff;
+}
+
+.pdfBtn:hover{
+    background:#b91c1c;
+}
+
+.printBtn{
+    background:#2563eb;
+    color:#fff;
+}
+
+.printBtn:hover{
+    background:#1d4ed8;
+}
+
+/* ==========================================
+   TABLE
+========================================== */
+
+.tableResponsive{
+    width:100%;
+    overflow-x:auto;
+}
+
+.tableResponsive table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.tableResponsive thead{
+    background:#f8fafc;
+}
+
+.tableResponsive th{
+    padding:16px;
+    text-align:left;
+    font-size:14px;
+    color:#475569;
+    font-weight:700;
+    border-bottom:1px solid #e2e8f0;
+}
+
+.tableResponsive td{
+    padding:16px;
+    font-size:14px;
+    color:#334155;
+    border-bottom:1px solid #f1f5f9;
+}
+
+.tableResponsive tbody tr{
+    transition:.25s;
+}
+
+.tableResponsive tbody tr:hover{
+    background:#f8fbff;
+}
+
+/* ==========================================
+   METHOD BADGES
+========================================== */
+
+.methodNFC,
+.methodFace,
+.methodNone{
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+    text-align:center;
+}
+
+.methodNFC{
+    background:#dbeafe;
+    color:#1d4ed8;
+}
+
+.methodFace{
+    background:#ede9fe;
+    color:#7c3aed;
+}
+
+.methodNone{
+    background:#f1f5f9;
+    color:#64748b;
+}
+
+/* ==========================================
+   STATUS BADGES
+========================================== */
+
+.statusPresent,
+.statusLate,
+.statusAbsent{
+    display:inline-block;
+    padding:6px 14px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.statusPresent{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+.statusLate{
+    background:#fef3c7;
+    color:#d97706;
+}
+
+.statusAbsent{
+    background:#fee2e2;
+    color:#dc2626;
+}
+
+/* ==========================================
+   TABLE FOOTER
+========================================== */
+
+.tableFooter{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 25px;
+    border-top:1px solid #e2e8f0;
+    background:#ffffff;
+}
+
+.tableFooter p{
+    font-size:14px;
+    color:#64748b;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+.tableHeader{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.exportButtons{
+    width:100%;
+}
+
+.exportButtons button{
+    flex:1;
+    justify-content:center;
+}
+
+}
+
+@media(max-width:768px){
+
+.tableResponsive table{
+    min-width:900px;
+}
+
+.tableHeader{
+    padding:20px;
+}
+
+.tableFooter{
+    padding:20px;
+}
+
+.exportButtons{
+    flex-direction:column;
+    width:100%;
+}
+
+.exportButtons button{
+    width:100%;
+}
+
+}
+
+@media(max-width:480px){
+
+.tableHeader h3{
+    font-size:20px;
+}
+
+.tableHeader p{
+    font-size:13px;
+}
+
+.tableResponsive th,
+.tableResponsive td{
+    padding:12px;
+    font-size:13px;
+}
+
+.tableFooter p{
+    font-size:13px;
+}
+
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+@keyframes fadeTable{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.attendanceTableCard{
+    animation:fadeTable .4s ease;
+}

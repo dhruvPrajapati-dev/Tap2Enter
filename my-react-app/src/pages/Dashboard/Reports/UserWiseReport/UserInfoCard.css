@@ -1,0 +1,392 @@
+/* ==========================================
+   USER INFORMATION CARD
+========================================== */
+
+.userInfoCard {
+    width: 100%;
+    background: #ffffff;
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    box-sizing: border-box;
+    animation: userCardFade 0.4s ease;
+}
+
+
+/* ==========================================
+   CARD HEADER
+========================================== */
+
+.userInfoCard .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.userInfoCard .cardHeader h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+
+/* ==========================================
+   STATUS BADGE
+========================================== */
+
+.activeBadge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 75px;
+    padding: 7px 14px;
+
+    border-radius: 30px;
+
+    background: #dcfce7;
+    color: #15803d;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   PROFILE SECTION
+========================================== */
+
+.profileTop {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    margin: 30px 0;
+    text-align: left;
+}
+
+
+/* ==========================================
+   PROFILE PHOTO
+========================================== */
+
+.profilePhoto {
+    width: 120px;
+    height: 120px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 5px solid #2563eb;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+    background: #eff6ff;
+}
+
+
+/* ==========================================
+   DEFAULT PROFILE ICON
+========================================== */
+
+.defaultProfile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #2563eb;
+    font-size: 45px;
+}
+
+
+/* ==========================================
+   USER NAME
+========================================== */
+
+.profileTop h2 {
+    margin: 0 0 6px 0;
+
+    font-size: 26px;
+    font-weight: 700;
+
+    color: #1e293b;
+}
+
+
+.profileTop p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   USER DETAILS
+========================================== */
+
+.userDetails {
+    width: 100%;
+
+    margin-top: 10px;
+
+    border-top: 1px solid #e2e8f0;
+
+    padding-top: 5px;
+}
+
+
+/* ==========================================
+   DETAIL ROW
+========================================== */
+
+.detailRow {
+    display: grid;
+
+    grid-template-columns: 180px 25px 1fr;
+
+    align-items: center;
+
+    min-height: 52px;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #f1f5f9;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   DETAIL LABEL
+========================================== */
+
+.detailRow label {
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #475569;
+}
+
+
+/* ==========================================
+   COLON
+========================================== */
+
+.detailRow .colon {
+    text-align: center;
+
+    color: #94a3b8;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   DETAIL VALUE
+========================================== */
+
+.detailRow span {
+    font-size: 14px;
+
+    font-weight: 500;
+
+    color: #1e293b;
+
+    word-break: break-word;
+}
+
+
+/* ==========================================
+   LAST ROW
+========================================== */
+
+.detailRow:last-child {
+    border-bottom: none;
+}
+
+
+/* ==========================================
+   RESPONSIVE - TABLET
+========================================== */
+
+@media (max-width: 768px) {
+
+    .userInfoCard {
+        padding: 25px;
+    }
+
+    .profileTop {
+        gap: 20px;
+    }
+
+    .profilePhoto {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profileTop h2 {
+        font-size: 23px;
+    }
+
+    .detailRow {
+        grid-template-columns: 150px 20px 1fr;
+    }
+}
+
+
+/* ==========================================
+   RESPONSIVE - MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .userInfoCard {
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .userInfoCard .cardHeader {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .userInfoCard .cardHeader h3 {
+        font-size: 19px;
+    }
+
+    .activeBadge {
+        min-width: auto;
+        padding: 6px 11px;
+        font-size: 12px;
+    }
+
+    .profileTop {
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+
+        margin: 25px 0;
+    }
+
+    .profilePhoto {
+        width: 110px;
+        height: 110px;
+    }
+
+    .profileTop h2 {
+        font-size: 22px;
+    }
+
+    .profileTop p {
+        font-size: 14px;
+    }
+
+    .detailRow {
+        grid-template-columns: 1fr;
+
+        gap: 5px;
+
+        padding: 13px 0;
+    }
+
+    .detailRow label {
+        font-size: 13px;
+    }
+
+    .detailRow .colon {
+        display: none;
+    }
+
+    .detailRow span {
+        font-size: 14px;
+    }
+}
+
+
+/* ==========================================
+   VERY SMALL SCREEN
+========================================== */
+
+@media (max-width: 400px) {
+
+    .userInfoCard {
+        padding: 16px;
+    }
+
+    .userInfoCard .cardHeader h3 {
+        font-size: 17px;
+    }
+
+    .profilePhoto {
+        width: 95px;
+        height: 95px;
+    }
+
+    .profileTop h2 {
+        font-size: 20px;
+    }
+}
+
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+@keyframes userCardFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+
+.inactiveBadge {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.noUserMessage {
+    padding: 40px 20px;
+    text-align: center;
+    color: #64748b;
+}
+
+.userDetailsTop {
+    flex: 1;
+}
+
+.userDetailsTop h2 {
+    margin: 0 0 6px;
+    font-size: 26px;
+    color: #1e293b;
+}
+
+.userDetailsTop p {
+    margin: 0;
+    color: #64748b;
+    font-size: 15px;
+    font-weight: 600;
+}

@@ -1,0 +1,83 @@
+.modalOverlay{
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.5);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+}
+
+.modal{
+
+    width:500px;
+
+    background:#fff;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    animation:popup .3s ease;
+}
+
+@keyframes popup{
+
+    from{
+        transform:scale(.8);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+.profileImage{
+
+    width:120px;
+    height:120px;
+
+    border-radius:50%;
+
+    display:block;
+
+    margin:20px auto;
+}
+
+.modal table{
+
+    width:100%;
+}
+
+.modal td{
+
+    padding:10px;
+}
+
+.closeBtn{
+
+    margin-top:20px;
+
+    width:100%;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#2563EB;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+}

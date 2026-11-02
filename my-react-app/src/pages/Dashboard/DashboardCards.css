@@ -1,0 +1,122 @@
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+    width: 100%;
+}
+
+.dashboard-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #e8edf5;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    min-width: 0;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    flex-shrink: 0;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.card-content h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 8px;
+}
+
+.card-content h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+.card-content p {
+    color: #6b7280;
+    font-size: 16px;
+    margin: 5px 0 0;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+    .dashboard-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .dashboard-card {
+        padding: 18px;
+        gap: 15px;
+    }
+
+    .card-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 25px;
+    }
+
+    .card-content h4 {
+        font-size: 16px;
+    }
+
+    .card-content h2 {
+        font-size: 34px;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .dashboard-card {
+        padding: 18px;
+    }
+
+    .card-icon {
+        width: 58px;
+        height: 58px;
+        font-size: 24px;
+    }
+
+    .card-content h4 {
+        font-size: 15px;
+    }
+
+    .card-content h2 {
+        font-size: 32px;
+    }
+}

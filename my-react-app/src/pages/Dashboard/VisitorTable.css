@@ -1,0 +1,167 @@
+.tableCard{
+
+    background:#fff;
+
+    margin-top:25px;
+
+    border-radius:15px;
+
+    border:1px solid #E5E7EB;
+
+    overflow:hidden;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
+
+}
+
+.tableHeader{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:22px;
+
+    border-bottom:1px solid #E5E7EB;
+
+}
+
+.tableHeader h2{
+
+    font-size:22px;
+
+    color:#111827;
+
+}
+
+.tableHeader p{
+
+    color:#6B7280;
+
+    margin-top:5px;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+thead{
+
+    background:#F9FAFB;
+
+}
+
+th{
+
+    padding:16px;
+
+    text-align:left;
+
+    color:#374151;
+
+    font-size:15px;
+
+}
+
+td{
+
+    padding:16px;
+
+    border-top:1px solid #F1F5F9;
+
+    color:#374151;
+
+}
+
+tbody tr:hover{
+
+    background:#F8FAFC;
+
+}
+
+.avatar{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+}
+
+.inside{
+
+    background:#DCFCE7;
+
+    color:#15803D;
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.outside{
+
+    background:#FEE2E2;
+
+    color:#DC2626;
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.methodIcon{
+
+    font-size:22px;
+
+    color:#2563EB;
+
+}
+
+.viewBtn{
+
+    width:38px;
+
+    height:38px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#EFF6FF;
+
+    color:#FFF;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.viewBtn:hover{
+
+    background:#02143d;
+
+    color:#fff;
+    border:2px solid #4a69b1;
+}

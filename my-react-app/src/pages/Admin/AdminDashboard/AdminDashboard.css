@@ -1,0 +1,208 @@
+/* ===========================
+   Add System Page
+=========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.add-system-page {
+  min-height: 100vh;
+  background: #f4f6f9;
+  padding: 30px;
+}
+
+.system-card {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.system-card h2 {
+  background: #2563eb;
+  color: white;
+  padding: 18px 25px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* ===========================
+   Form
+=========================== */
+
+.system-card form {
+  padding: 25px;
+}
+
+/* ===========================
+   Section Title
+=========================== */
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2563eb;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+/* ===========================
+   Grid Layout
+=========================== */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* ===========================
+   Form Group
+=========================== */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+  background: #fff;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.2);
+}
+
+/* ===========================
+   Password Field
+=========================== */
+
+.password-group {
+  position: relative;
+}
+
+.password-group input {
+  padding-right: 45px;
+}
+
+.eye {
+  position: absolute;
+  right: 15px;
+  top: 42px;
+  cursor: pointer;
+  color: #6b7280;
+  font-size: 18px;
+}
+
+.eye:hover {
+  color: #2563eb;
+}
+
+/* ===========================
+   Full Width
+=========================== */
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.save-btn,
+.reset-btn {
+  border: none;
+  padding: 12px 30px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.save-btn {
+  background: #2563eb;
+  color: #fff;
+}
+
+.save-btn:hover {
+  background: #1d4ed8;
+}
+
+.reset-btn {
+  background: #6b7280;
+  color: white;
+}
+
+.reset-btn:hover {
+  background: #4b5563;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 768px) {
+
+  .add-system-page {
+    padding: 15px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .save-btn,
+  .reset-btn {
+    width: 100%;
+  }
+}

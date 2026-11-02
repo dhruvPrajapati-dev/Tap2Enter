@@ -1,0 +1,6 @@
+Flask-Cors
+mysql-connector-python
+python-dotenv
+Flask-JWT-Extended
+opencv-python
+face-recognition

@@ -1,0 +1,1546 @@
+/* =========================================================
+   VISITOR PAGE
+   Full-screen + Scrollable + Responsive
+========================================================= */
+
+/* ---------------------------------------------------------
+   GLOBAL BOX SIZING
+--------------------------------------------------------- */
+
+.visitor-page,
+.visitor-page *,
+.visitor-page *::before,
+.visitor-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* ---------------------------------------------------------
+   FULL SCREEN PAGE
+--------------------------------------------------------- */
+
+.visitor-page {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  background: #f5f7fa;
+
+  color: #14213d;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  /*
+    Important:
+    The page itself is scrollable.
+  */
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  /*
+    Keep Visitor above existing
+    Sidebar / Navbar / Dashboard.
+  */
+
+  z-index: 999999;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.visitor-header {
+  position: sticky;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 80px;
+
+  min-height: 80px;
+
+  padding: 0 40px;
+
+  background: #071d38;
+
+  color: #ffffff;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  z-index: 1000;
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.visitor-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  min-width: 0;
+}
+
+
+.visitor-logo {
+  width: 46px;
+
+  height: 46px;
+
+  min-width: 46px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 2px solid #ffffff;
+
+  border-radius: 50%;
+
+  font-size: 22px;
+}
+
+
+.visitor-brand-text {
+  min-width: 0;
+}
+
+
+.visitor-brand-text h2 {
+  margin: 0;
+
+  font-size: 22px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+
+.visitor-brand-text span {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 12px;
+
+  line-height: 1.2;
+
+  color: #ccd6e4;
+}
+
+
+/* =========================================================
+   HEADER RIGHT
+========================================================= */
+
+.visitor-header-right {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 25px;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   DATE / TIME
+========================================================= */
+
+.visitor-time {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  white-space: nowrap;
+}
+
+
+.visitor-time svg {
+  flex-shrink: 0;
+
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   I'M USER BUTTON
+========================================================= */
+
+.back-user-button {
+  height: 44px;
+
+  min-height: 44px;
+
+  padding: 0 20px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #1976ff;
+
+  color: #ffffff;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+
+.back-user-button:hover {
+  background: #075ed6;
+}
+
+
+.back-user-button:active {
+  transform: scale(0.97);
+}
+
+
+.back-user-button svg {
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.visitor-main {
+  width: 100%;
+
+  /*
+    Do NOT use fixed height here.
+    This is important for scrolling.
+  */
+
+  min-height: calc(100vh - 80px);
+
+  height: auto;
+
+  padding: 25px 40px 45px;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   PAGE TITLE
+========================================================= */
+
+.visitor-title {
+  width: 100%;
+
+  min-height: 62px;
+
+  margin-bottom: 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+
+.visitor-title-line {
+  width: 5px;
+
+  min-width: 5px;
+
+  height: 52px;
+
+  border-radius: 5px;
+
+  background: #ed2929;
+}
+
+
+.visitor-title h1 {
+  margin: 0;
+
+  font-size: 30px;
+
+  line-height: 1.15;
+
+  font-weight: 700;
+
+  color: #10233f;
+}
+
+
+.visitor-title p {
+  margin: 6px 0 0;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  color: #526071;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.visitor-content {
+  width: 100%;
+
+  /*
+    Important:
+    Do NOT use height: calc().
+  */
+
+  height: auto;
+
+  min-height: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(360px, 0.9fr)
+    minmax(480px, 1.1fr);
+
+  gap: 22px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   FORM CARD / FACE CARD
+========================================================= */
+
+.visitor-form-card,
+.visitor-face-card {
+  width: 100%;
+
+  /*
+    Important:
+    Cards must have auto height.
+  */
+
+  height: auto;
+
+  min-height: 500px;
+
+  padding: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #e0e6ee;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.04);
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.visitor-card-title {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+.visitor-card-icon {
+  width: 38px;
+
+  min-width: 38px;
+
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #edf5ff;
+
+  color: #1976ff;
+}
+
+
+.visitor-card-icon svg {
+  font-size: 20px;
+}
+
+
+.visitor-card-title h2 {
+  margin: 0;
+
+  font-size: 20px;
+
+  line-height: 1.3;
+
+  color: #172b4d;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.visitor-description {
+  margin: 7px 0 18px;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  color: #667085;
+}
+
+
+/* =========================================================
+   INPUT GROUP
+========================================================= */
+
+.visitor-input-group {
+  width: 100%;
+
+  margin-bottom: 14px;
+}
+
+
+.visitor-input-group label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-size: 13px;
+
+  line-height: 1.3;
+
+  font-weight: 600;
+
+  color: #172b4d;
+}
+
+
+.visitor-input-group label span {
+  margin-left: 3px;
+
+  color: #e11d48;
+}
+
+
+/* =========================================================
+   NORMAL INPUT
+========================================================= */
+
+.visitor-input {
+  width: 100%;
+
+  height: 44px;
+
+  min-height: 44px;
+
+  padding: 0 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  border: 1px solid #d5dce5;
+
+  border-radius: 8px;
+
+  background: #fafbfd;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.visitor-input:hover {
+  border-color: #b9c3d0;
+}
+
+
+.visitor-input:focus-within {
+  border-color: #1976ff;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(25, 118, 255, 0.08);
+}
+
+
+.visitor-input svg {
+  flex-shrink: 0;
+
+  color: #718096;
+
+  font-size: 17px;
+}
+
+
+.visitor-input input {
+  width: 100%;
+
+  height: 100%;
+
+  min-width: 0;
+
+  padding: 0;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #14213d;
+
+  font-family: inherit;
+
+  font-size: 14px;
+}
+
+
+.visitor-input input::placeholder {
+  color: #9aa5b4;
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+.visitor-textarea {
+  width: 100%;
+
+  min-height: 82px;
+
+  padding: 10px 12px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 9px;
+
+  border: 1px solid #d5dce5;
+
+  border-radius: 8px;
+
+  background: #fafbfd;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.visitor-textarea:hover {
+  border-color: #b9c3d0;
+}
+
+
+.visitor-textarea:focus-within {
+  border-color: #1976ff;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(25, 118, 255, 0.08);
+}
+
+
+.visitor-textarea svg {
+  flex-shrink: 0;
+
+  margin-top: 2px;
+
+  color: #718096;
+
+  font-size: 17px;
+}
+
+
+.visitor-textarea textarea {
+  width: 100%;
+
+  min-width: 0;
+
+  min-height: 60px;
+
+  padding: 0;
+
+  border: none;
+
+  outline: none;
+
+  resize: vertical;
+
+  background: transparent;
+
+  color: #14213d;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+.visitor-textarea textarea::placeholder {
+  color: #9aa5b4;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.visitor-submit {
+  width: 100%;
+
+  height: 46px;
+
+  min-height: 46px;
+
+  margin-top: 7px;
+
+  padding: 0 16px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #1976ff;
+
+  color: #ffffff;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+
+.visitor-submit:hover {
+  background: #075ed6;
+}
+
+
+.visitor-submit:active {
+  transform: scale(0.99);
+}
+
+
+.visitor-submit svg {
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   CAMERA AREA
+========================================================= */
+
+.visitor-camera {
+  position: relative;
+
+  width: 100%;
+
+  /*
+    Fixed camera height is okay.
+    Page itself will scroll if needed.
+  */
+
+  height: 430px;
+
+  min-height: 300px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: #101820;
+}
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.visitor-video {
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  /*
+    Mirror webcam like a normal camera.
+  */
+
+  transform: scaleX(-1);
+}
+
+
+/* =========================================================
+   FACE FRAME
+========================================================= */
+
+.visitor-face-frame {
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  width: 220px;
+
+  height: 270px;
+
+  transform: translate(-50%, -50%);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   FACE FRAME CORNERS
+========================================================= */
+
+.visitor-corner {
+  position: absolute;
+
+  width: 42px;
+
+  height: 42px;
+
+  border-style: solid;
+
+  border-color: #00ef72;
+}
+
+
+.visitor-corner.top-left {
+  top: 0;
+
+  left: 0;
+
+  border-width: 5px 0 0 5px;
+
+  border-radius: 8px 0 0 0;
+}
+
+
+.visitor-corner.top-right {
+  top: 0;
+
+  right: 0;
+
+  border-width: 5px 5px 0 0;
+
+  border-radius: 0 8px 0 0;
+}
+
+
+.visitor-corner.bottom-left {
+  bottom: 0;
+
+  left: 0;
+
+  border-width: 0 0 5px 5px;
+
+  border-radius: 0 0 0 8px;
+}
+
+
+.visitor-corner.bottom-right {
+  right: 0;
+
+  bottom: 0;
+
+  border-width: 0 5px 5px 0;
+
+  border-radius: 0 0 8px 0;
+}
+
+
+/* =========================================================
+   FACE SCANNING MESSAGE
+========================================================= */
+
+.face-scanning {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 15px;
+
+  transform: translateX(-50%);
+
+  max-width: calc(100% - 30px);
+
+  padding: 9px 16px;
+
+  border-radius: 7px;
+
+  background: rgba(0, 0, 0, 0.75);
+
+  color: #ffffff;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  white-space: nowrap;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+.scanning-dot {
+  width: 9px;
+
+  min-width: 9px;
+
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #1976ff;
+
+  animation: visitorScanning 1s infinite;
+}
+
+
+@keyframes visitorScanning {
+
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.25;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+
+/* =========================================================
+   FACE CAPTURED MESSAGE
+========================================================= */
+
+.visitor-face-detected {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 15px;
+
+  transform: translateX(-50%);
+
+  max-width: calc(100% - 30px);
+
+  padding: 9px 16px;
+
+  border-radius: 7px;
+
+  background: #087b36;
+
+  color: #ffffff;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  white-space: nowrap;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   AUTOMATIC FACE STATUS
+========================================================= */
+
+.automatic-face-status {
+  width: 100%;
+
+  min-height: 42px;
+
+  height: auto;
+
+  margin-top: 12px;
+
+  padding: 8px 12px;
+
+  border: 1px solid #dbe3ed;
+
+  border-radius: 8px;
+
+  background: #f8fafc;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  color: #526071;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  text-align: center;
+}
+
+
+.automatic-face-status.captured {
+  border-color: #a7e0bd;
+
+  background: #effcf4;
+
+  color: #087b36;
+}
+
+
+.automatic-face-status svg {
+  flex-shrink: 0;
+
+  font-size: 18px;
+}
+
+
+.status-dot {
+  width: 9px;
+
+  min-width: 9px;
+
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #1976ff;
+
+  animation: visitorScanning 1s infinite;
+}
+
+
+/* =========================================================
+   SECURITY INFORMATION
+========================================================= */
+
+.visitor-security {
+  width: 100%;
+
+  min-height: 58px;
+
+  margin-top: 12px;
+
+  padding: 9px 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  border: 1px solid #f0d68a;
+
+  border-radius: 8px;
+
+  background: #fffdf3;
+}
+
+
+.visitor-security-icon {
+  width: 34px;
+
+  min-width: 34px;
+
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #19365d;
+}
+
+
+.visitor-security-icon svg {
+  font-size: 21px;
+}
+
+
+.visitor-security strong {
+  display: block;
+
+  margin: 0;
+
+  font-size: 12px;
+
+  line-height: 1.3;
+
+  color: #172b4d;
+}
+
+
+.visitor-security p {
+  margin: 3px 0 0;
+
+  font-size: 11px;
+
+  line-height: 1.4;
+
+  color: #667085;
+}
+
+
+/* =========================================================
+   CAMERA ERROR
+========================================================= */
+
+.camera-error {
+  width: 100%;
+
+  height: 100%;
+
+  padding: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  color: #d1d5db;
+}
+
+
+.camera-error svg {
+  margin-bottom: 12px;
+
+  font-size: 45px;
+}
+
+
+.camera-error h3 {
+  margin: 0 0 6px;
+
+  color: #ffffff;
+
+  font-size: 17px;
+}
+
+
+.camera-error p {
+  max-width: 350px;
+
+  margin: 0;
+
+  color: #9ca3af;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .visitor-header {
+    padding: 0 25px;
+  }
+
+
+  .visitor-main {
+    padding: 25px 25px 40px;
+  }
+
+
+  .visitor-content {
+    grid-template-columns:
+      minmax(320px, 1fr)
+      minmax(400px, 1fr);
+
+    gap: 18px;
+  }
+
+
+  .visitor-form-card,
+  .visitor-face-card {
+    padding: 18px;
+  }
+
+
+  .visitor-camera {
+    height: 380px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .visitor-header {
+    padding: 0 20px;
+  }
+
+
+  .visitor-header-right {
+    gap: 12px;
+  }
+
+
+  .visitor-time {
+    display: none;
+  }
+
+
+  .visitor-main {
+    padding: 22px 20px 40px;
+  }
+
+
+  .visitor-content {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+
+  .visitor-form-card,
+  .visitor-face-card {
+    min-height: 0;
+
+    height: auto;
+  }
+
+
+  .visitor-camera {
+    height: 400px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .visitor-page {
+    width: 100%;
+
+    min-width: 0;
+
+    overflow-x: hidden;
+
+    overflow-y: auto;
+  }
+
+
+  .visitor-header {
+    position: sticky;
+
+    top: 0;
+
+    width: 100%;
+
+    height: auto;
+
+    min-height: 70px;
+
+    padding: 10px 15px;
+  }
+
+
+  .visitor-brand {
+    gap: 9px;
+  }
+
+
+  .visitor-logo {
+    width: 40px;
+
+    min-width: 40px;
+
+    height: 40px;
+
+    font-size: 19px;
+  }
+
+
+  .visitor-brand-text h2 {
+    font-size: 19px;
+  }
+
+
+  .visitor-brand-text span {
+    display: none;
+  }
+
+
+  .visitor-header-right {
+    gap: 7px;
+  }
+
+
+  .back-user-button {
+    height: 40px;
+
+    min-height: 40px;
+
+    padding: 0 12px;
+
+    font-size: 12px;
+  }
+
+
+  .visitor-main {
+    width: 100%;
+
+    min-height: calc(100vh - 70px);
+
+    height: auto;
+
+    padding: 18px 12px 35px;
+  }
+
+
+  .visitor-title {
+    min-height: 55px;
+
+    margin-bottom: 18px;
+
+    gap: 10px;
+  }
+
+
+  .visitor-title-line {
+    width: 4px;
+
+    min-width: 4px;
+
+    height: 48px;
+  }
+
+
+  .visitor-title h1 {
+    font-size: 24px;
+  }
+
+
+  .visitor-title p {
+    margin-top: 4px;
+
+    font-size: 12px;
+  }
+
+
+  .visitor-content {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  .visitor-form-card,
+  .visitor-face-card {
+    width: 100%;
+
+    min-height: 0;
+
+    height: auto;
+
+    padding: 17px;
+  }
+
+
+  .visitor-card-title h2 {
+    font-size: 18px;
+  }
+
+
+  .visitor-description {
+    font-size: 12px;
+  }
+
+
+  .visitor-camera {
+    width: 100%;
+
+    height: 320px;
+
+    min-height: 320px;
+  }
+
+
+  .visitor-face-frame {
+    width: 190px;
+
+    height: 235px;
+  }
+
+
+  .visitor-face-detected,
+  .face-scanning {
+    font-size: 11px;
+
+    padding: 8px 11px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .visitor-header {
+    padding: 9px 11px;
+  }
+
+
+  .visitor-logo {
+    width: 36px;
+
+    min-width: 36px;
+
+    height: 36px;
+  }
+
+
+  .visitor-brand-text h2 {
+    font-size: 17px;
+  }
+
+
+  .back-user-button {
+    padding: 0 10px;
+
+    font-size: 11px;
+  }
+
+
+  .visitor-main {
+    padding: 15px 10px 30px;
+  }
+
+
+  .visitor-title h1 {
+    font-size: 21px;
+  }
+
+
+  .visitor-camera {
+    height: 280px;
+
+    min-height: 280px;
+  }
+
+
+  .visitor-face-frame {
+    width: 170px;
+
+    height: 215px;
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.visitor-page button:focus-visible,
+.visitor-page input:focus-visible,
+.visitor-page textarea:focus-visible {
+  outline: 2px solid #1976ff;
+
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   PREVENT IMAGE / VIDEO OVERFLOW
+========================================================= */
+
+.visitor-page img,
+.visitor-page video {
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   REMOVE UNEXPECTED MARGINS
+========================================================= */
+
+.visitor-page h1,
+.visitor-page h2,
+.visitor-page h3,
+.visitor-page p {
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.visitor-page::-webkit-scrollbar {
+  width: 8px;
+}
+
+
+.visitor-page::-webkit-scrollbar-track {
+  background: #eef1f5;
+}
+
+
+.visitor-page::-webkit-scrollbar-thumb {
+  background: #aeb8c5;
+
+  border-radius: 10px;
+}
+
+
+.visitor-page::-webkit-scrollbar-thumb:hover {
+  background: #8d99a8;
+}

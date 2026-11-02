@@ -1,0 +1,423 @@
+/* ==========================================
+   REPORT TABLE CARD
+========================================== */
+
+.reportTableCard{
+    width:100%;
+    background:#ffffff;
+    border-radius:18px;
+    padding:25px;
+    margin-top:25px;
+    box-shadow:0 8px 24px rgba(15,23,42,.08);
+    overflow:hidden;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.tableHeader{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.tableHeader h2{
+    font-size:24px;
+    font-weight:700;
+    color:#1e293b;
+    margin-bottom:6px;
+}
+
+.tableHeader p{
+    font-size:14px;
+    color:#64748b;
+}
+
+/* ==========================================
+   EXPORT BUTTONS
+========================================== */
+
+.exportButtons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.excelBtn,
+.pdfBtn{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    border:none;
+    cursor:pointer;
+    padding:12px 18px;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.excelBtn{
+    background:#10b981;
+    color:#fff;
+}
+
+.excelBtn:hover{
+    background:#059669;
+}
+
+.pdfBtn{
+    background:#ef4444;
+    color:#fff;
+}
+
+.pdfBtn:hover{
+    background:#dc2626;
+}
+
+/* ==========================================
+   TABLE
+========================================== */
+
+.tableResponsive{
+    width:100%;
+    overflow-x:auto;
+}
+
+.tableResponsive table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:850px;
+}
+
+.tableResponsive thead{
+    background:#f8fafc;
+}
+
+.tableResponsive th{
+    padding:16px;
+    text-align:left;
+    font-size:14px;
+    font-weight:700;
+    color:#475569;
+    border-bottom:2px solid #e2e8f0;
+}
+
+.tableResponsive td{
+    padding:16px;
+    border-bottom:1px solid #edf2f7;
+    font-size:14px;
+    color:#334155;
+}
+
+.tableResponsive tbody tr{
+    transition:.3s;
+}
+
+.tableResponsive tbody tr:hover{
+    background:#f8fbff;
+}
+
+/* ==========================================
+   USER NAME
+========================================== */
+
+.tableResponsive td:first-child{
+    font-weight:600;
+}
+
+.tableResponsive td:nth-child(2){
+    font-weight:600;
+    color:#1e293b;
+}
+
+.tableResponsive td:nth-child(3){
+    color:#2563eb;
+    font-weight:600;
+}
+
+/* ==========================================
+   METHOD BADGES
+========================================== */
+
+.methodNFC,
+.methodFace{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:6px 14px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.methodNFC{
+    background:#dbeafe;
+    color:#2563eb;
+}
+
+.methodFace{
+    background:#ede9fe;
+    color:#7c3aed;
+}
+
+/* ==========================================
+   STATUS BADGES
+========================================== */
+
+.statusComplete,
+.statusInside{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:6px 14px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.statusComplete{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+.statusInside{
+    background:#fef3c7;
+    color:#b45309;
+}
+
+/* ==========================================
+   PAGINATION
+========================================== */
+
+.pagination{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:25px;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.pagination p{
+    color:#64748b;
+    font-size:14px;
+}
+
+.pagination div{
+    display:flex;
+    gap:8px;
+}
+
+.pagination button{
+    width:38px;
+    height:38px;
+    border:none;
+    border-radius:8px;
+    background:#f1f5f9;
+    color:#334155;
+    cursor:pointer;
+    transition:.3s;
+    font-weight:600;
+}
+
+.pagination button:hover{
+    background:#2563eb;
+    color:#fff;
+}
+
+.activePage{
+    background:#2563eb !important;
+    color:#fff !important;
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+.tableResponsive::-webkit-scrollbar{
+    height:8px;
+}
+
+.tableResponsive::-webkit-scrollbar-track{
+    background:#e5e7eb;
+    border-radius:20px;
+}
+
+.tableResponsive::-webkit-scrollbar-thumb{
+    background:#94a3b8;
+    border-radius:20px;
+}
+
+.tableResponsive::-webkit-scrollbar-thumb:hover{
+    background:#64748b;
+}
+
+/* ==========================================
+   RESPONSIVE - TABLET
+========================================== */
+
+@media(max-width:992px){
+
+.tableHeader{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.exportButtons{
+    width:100%;
+}
+
+.excelBtn,
+.pdfBtn{
+    flex:1;
+    justify-content:center;
+}
+
+.pagination{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+}
+
+/* ==========================================
+   RESPONSIVE - MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+.reportTableCard{
+    padding:18px;
+}
+
+.tableHeader h2{
+    font-size:20px;
+}
+
+.tableHeader p{
+    font-size:13px;
+}
+
+.exportButtons{
+    flex-direction:column;
+}
+
+.excelBtn,
+.pdfBtn{
+    width:100%;
+}
+
+.tableResponsive table{
+    min-width:700px;
+}
+
+.pagination{
+    align-items:center;
+    text-align:center;
+}
+
+.pagination div{
+    justify-content:center;
+}
+
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media(max-width:480px){
+
+.reportTableCard{
+    padding:15px;
+}
+
+.tableHeader h2{
+    font-size:18px;
+}
+
+.tableResponsive th,
+.tableResponsive td{
+    padding:12px;
+    font-size:13px;
+}
+
+.pagination p{
+    font-size:13px;
+}
+
+.pagination button{
+    width:34px;
+    height:34px;
+}
+
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+@keyframes fadeTable{
+
+from{
+    opacity:0;
+    transform:translateY(15px);
+}
+
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+
+}
+
+.reportTableCard{
+    animation:fadeTable .35s ease;
+}
+
+/* =====================================================
+   REPORT TYPE RADIO BUTTONS
+===================================================== */
+
+.reportTypeSelector {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    padding: 15px 20px;
+
+    border-bottom: 1px solid #eee;
+}
+
+
+.radioOption {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    color: #333;
+}
+
+
+.radioOption input[type="radio"] {
+    width: 17px;
+    height: 17px;
+
+    cursor: pointer;
+}
+
+
+.radioOption span {
+    cursor: pointer;
+}

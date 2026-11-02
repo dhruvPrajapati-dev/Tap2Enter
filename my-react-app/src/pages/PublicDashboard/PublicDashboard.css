@@ -1,0 +1,978 @@
+/* =========================================================
+   TAP2ENTER - DESKTOP USER ATTENDANCE
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fa;
+}
+
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.attendance-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f7fa;
+  color: #14213d;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.attendance-header {
+  width: 100%;
+  height: 70px;
+
+  background: #071d38;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 42px;
+
+  color: white;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand-section {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-logo {
+  width: 48px;
+  height: 48px;
+
+  border: 2px solid white;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+}
+
+.brand-text h2 {
+  margin: 0;
+
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.brand-text span {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 13px;
+
+  color: #d3dbe7;
+}
+
+
+/* =========================================================
+   HEADER RIGHT
+========================================================= */
+
+.header-right {
+  display: flex;
+  align-items: center;
+
+  gap: 35px;
+}
+
+.header-time {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+.header-time svg {
+  font-size: 22px;
+}
+
+
+/* =========================================================
+   I'M VISITOR BUTTON
+========================================================= */
+
+.visitor-button {
+  height: 48px;
+
+  padding: 0 24px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #ff1717;
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.visitor-button:hover {
+  background: #d90000;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.attendance-container {
+  width: 100%;
+
+  padding: 30px 42px 35px;
+}
+
+
+/* =========================================================
+   PAGE TITLE
+========================================================= */
+
+.page-title {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 22px;
+}
+
+.title-line {
+  width: 5px;
+  height: 40px;
+
+  border-radius: 5px;
+
+  background: #ed2929;
+}
+
+.page-title h1 {
+  margin: 0;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #10233f;
+}
+
+.page-title p {
+  margin: 3px 0 0;
+
+  font-size: 15px;
+
+  color: #526071;
+}
+
+
+/* =========================================================
+   SUCCESS MESSAGE
+========================================================= */
+
+.attendance-success {
+  width: 100%;
+  min-height: 72px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 10px 17px;
+
+  margin-bottom: 20px;
+
+  border-radius: 9px;
+
+  border: 1px solid;
+}
+
+
+/* ENTRY */
+
+.entry-success {
+  background: #effff3;
+  border-color: #5bd27b;
+}
+
+
+/* EXIT */
+
+.exit-success {
+  background: #fff9ed;
+  border-color: #f2c45c;
+}
+
+
+/* SUCCESS ICON */
+
+.success-icon {
+  width: 46px;
+  height: 46px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  font-size: 25px;
+}
+
+.entry-success .success-icon {
+  background: #19b84d;
+}
+
+.exit-success .success-icon {
+  background: #ef9b16;
+}
+
+
+/* SUCCESS CONTENT */
+
+.success-content {
+  flex: 1;
+}
+
+.success-content h3 {
+  margin: 0 0 4px;
+
+  font-size: 19px;
+}
+
+.success-content p {
+  margin: 0;
+
+  font-size: 13px;
+
+  color: #4c5968;
+}
+
+
+/* SUCCESS TIME */
+
+.success-time {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* STATUS */
+
+.status-badge {
+  padding: 9px 17px;
+
+  border-radius: 7px;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.entry-badge {
+  color: #15803d;
+  background: #d9f7df;
+}
+
+.exit-badge {
+  color: #d97706;
+  background: #fff0c9;
+}
+
+
+/* =========================================================
+   TWO COLUMN DESKTOP LAYOUT
+========================================================= */
+
+.attendance-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 45% 55%;
+
+  gap: 22px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.attendance-card {
+  width: 100%;
+
+  background: white;
+
+  border: 1px solid #e1e6ed;
+
+  border-radius: 11px;
+
+  padding: 22px;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.045);
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.card-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.heading-icon {
+  display: flex;
+  align-items: center;
+
+  color: #1976ff;
+
+  font-size: 27px;
+}
+
+.card-heading h2 {
+  margin: 0;
+
+  font-size: 23px;
+}
+
+.card-description {
+  margin: 9px 0 17px;
+
+  font-size: 14px;
+
+  color: #526071;
+}
+
+
+/* =========================================================
+   NFC INPUT
+========================================================= */
+
+.nfc-input-wrapper {
+  width: 100%;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+
+  border: 2px solid #247cff;
+
+  border-radius: 9px;
+
+  background: #f8fbff;
+
+  overflow: hidden;
+}
+
+.nfc-input-field {
+  flex: 1;
+
+  width: 100%;
+
+  height: 100%;
+
+  padding: 0 17px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-size: 20px;
+  font-weight: 600;
+
+  color: #14213d;
+
+  letter-spacing: 1px;
+}
+
+.nfc-input-field::placeholder {
+  color: #98a4b3;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  letter-spacing: 0;
+}
+
+
+/* =========================================================
+   NFC SUBMIT BUTTON
+========================================================= */
+
+.nfc-submit-button {
+  height: 44px;
+
+  margin-right: 7px;
+
+  padding: 0 18px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #1976ff;
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.nfc-submit-button:hover {
+  background: #075ed6;
+}
+
+
+/* =========================================================
+   NFC SUCCESS
+========================================================= */
+
+.nfc-success {
+  width: 100%;
+
+  margin-top: 17px;
+
+  padding: 14px 17px;
+
+  border: 1px solid #8be3a5;
+
+  border-radius: 8px;
+
+  background: #effff4;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: #14933c;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nfc-success svg {
+  font-size: 21px;
+}
+
+
+/* =========================================================
+   HOW TO USE
+========================================================= */
+
+.how-to-use {
+  width: 100%;
+
+  margin-top: 17px;
+
+  padding: 16px;
+
+  display: flex;
+
+  gap: 12px;
+
+  border: 1px solid #cbdfff;
+
+  border-radius: 8px;
+
+  background: #f3f7ff;
+}
+
+.how-to-use > svg {
+  flex-shrink: 0;
+
+  color: #1976ff;
+
+  font-size: 21px;
+}
+
+.how-to-use h4 {
+  margin: 0 0 4px;
+
+  font-size: 15px;
+}
+
+.how-to-use p {
+  margin: 0;
+
+  font-size: 13px;
+
+  line-height: 1.45;
+
+  color: #42526a;
+}
+
+
+/* =========================================================
+   NFC ILLUSTRATION
+========================================================= */
+
+.nfc-illustration {
+  height: 90px;
+
+  margin-top: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  color: #1976ff;
+
+  font-size: 58px;
+}
+
+.nfc-waves {
+  font-size: 22px;
+
+  letter-spacing: -5px;
+}
+
+
+/* =========================================================
+   CAMERA
+========================================================= */
+
+.camera-container {
+  width: 100%;
+
+  height: 390px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: #101010;
+}
+
+.camera-video {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transform: scaleX(-1);
+}
+
+
+/* =========================================================
+   FACE FRAME
+========================================================= */
+
+.face-frame {
+  position: absolute;
+
+  width: 220px;
+  height: 260px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.corner {
+  position: absolute;
+
+  width: 40px;
+  height: 40px;
+
+  border-color: #00ef72;
+
+  border-style: solid;
+}
+
+.top-left {
+  top: 0;
+  left: 0;
+
+  border-width: 5px 0 0 5px;
+
+  border-radius: 10px 0 0 0;
+}
+
+.top-right {
+  top: 0;
+  right: 0;
+
+  border-width: 5px 5px 0 0;
+
+  border-radius: 0 10px 0 0;
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 0;
+
+  border-width: 0 0 5px 5px;
+
+  border-radius: 0 0 0 10px;
+}
+
+.bottom-right {
+  right: 0;
+  bottom: 0;
+
+  border-width: 0 5px 5px 0;
+
+  border-radius: 0 0 10px 0;
+}
+
+
+/* =========================================================
+   FACE DETECTED
+========================================================= */
+
+.face-detected {
+  position: absolute;
+
+  left: 50%;
+  bottom: 18px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 11px 19px;
+
+  border-radius: 8px;
+
+  background: #087b36;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   SECURITY NOTICE
+========================================================= */
+
+.security-notice {
+  width: 100%;
+
+  min-height: 65px;
+
+  margin-top: 20px;
+
+  padding: 13px 20px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  border: 1px solid #f0d68a;
+
+  border-radius: 9px;
+
+  background: #fffdf3;
+}
+
+.security-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff1bb;
+
+  color: #19365d;
+
+  font-size: 21px;
+}
+
+.security-notice h3 {
+  margin: 0 0 3px;
+
+  font-size: 15px;
+}
+
+.security-notice p {
+  margin: 0;
+
+  font-size: 13px;
+
+  color: #4c5968;
+}
+
+
+/* =========================================================
+   DESKTOP 1600px+
+========================================================= */
+
+@media (min-width: 1600px) {
+
+  .attendance-header {
+    height: 94px;
+
+    padding: 0 55px;
+  }
+
+  .attendance-container {
+    padding: 38px 55px;
+  }
+
+  .page-title h1 {
+    font-size: 38px;
+  }
+
+  .camera-container {
+    height: 450px;
+  }
+
+  .attendance-card {
+    padding: 26px;
+  }
+
+}
+
+
+/* =========================================================
+   LAPTOP 1366px
+========================================================= */
+
+@media (min-width: 1200px) and (max-width: 1450px) {
+
+  .attendance-header {
+    padding: 0 30px;
+  }
+
+  .attendance-container {
+    padding: 27px 30px;
+  }
+
+  .camera-container {
+    height: 350px;
+  }
+
+  .nfc-illustration {
+    height: 70px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL DESKTOP
+========================================================= */
+
+@media (max-width: 1199px) {
+
+  .attendance-header {
+    padding: 0 25px;
+  }
+
+  .attendance-container {
+    padding: 25px;
+  }
+
+  .attendance-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .camera-container {
+    height: 320px;
+  }
+
+  .header-time {
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .attendance-header {
+    height: auto;
+
+    padding: 15px 18px;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+  }
+
+  .header-right {
+    gap: 10px;
+  }
+
+  .header-time {
+    display: none;
+  }
+
+  .attendance-container {
+    padding: 20px 15px;
+  }
+
+  .attendance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-title h1 {
+    font-size: 28px;
+  }
+
+  .camera-container {
+    height: 330px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE SMALL
+========================================================= */
+
+@media (max-width: 500px) {
+
+  .brand-text span {
+    display: none;
+  }
+
+  .brand-text h2 {
+    font-size: 19px;
+  }
+
+  .visitor-button {
+    height: 42px;
+
+    padding: 0 13px;
+
+    font-size: 13px;
+  }
+
+  .page-title {
+    gap: 10px;
+  }
+
+  .title-line {
+    height: 50px;
+  }
+
+  .page-title h1 {
+    font-size: 25px;
+  }
+
+  .page-title p {
+    font-size: 13px;
+  }
+
+  .nfc-input-wrapper {
+    height: 55px;
+  }
+
+  .nfc-input-field {
+    font-size: 16px;
+
+    padding: 0 12px;
+  }
+
+  .nfc-submit-button {
+    height: 41px;
+
+    padding: 0 12px;
+
+    margin-right: 5px;
+  }
+
+  .camera-container {
+    height: 280px;
+  }
+
+  .face-frame {
+    width: 170px;
+
+    height: 210px;
+  }
+
+  .attendance-success {
+    flex-wrap: wrap;
+  }
+
+  .success-time {
+    margin-left: 60px;
+  }
+
+}
